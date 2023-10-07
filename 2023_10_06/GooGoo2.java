@@ -18,14 +18,15 @@ public class GooGoo {
 
         public void run() {
             long sleepTime = (long) (Math.random() * 500);
-            System.out.println(n + "단이 " + sleepTime + "만큼 sleep...");
+            
             try {
                 Thread.sleep(sleepTime);
+                System.out.println(n + "단이 " + sleepTime + "만큼 sleep...");
+                System.out.println("Execute Thread " + n + ".");
+                for (int i = 1; i <= 9; i++) {
+                    System.out.println(n + " * " + i + " = " + (n * i));
+                }
             } catch (Exception e) { }
-            System.out.println("Execute Thread " + n + ".");
-            for (int i = 1; i <= 9; i++) {
-                System.out.println(n + " * " + i + " = " + (n * i));
-            }
         }
     }
 }
