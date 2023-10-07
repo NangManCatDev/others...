@@ -1,35 +1,26 @@
-import java.util.Scanner;
-
-public class GooGoo{
+public class GooGoo {
     public static void main(String[] args) {
         GooGoo goo = new GooGoo();
-        GooGooThread t = goo.new GooGooThread();
-        t.start();
+        GooGooThread[] t = new GooGooThread[9];
+        
+        for (int i = 1; i < 10; i++) {
+            t[i-1] = goo.new GooGooThread(i);
+            t[i-1].start();
+        }
     }
 
     class GooGooThread extends Thread {
+        int n;
+
+        public GooGooThread(int n) {
+            this.n = n;
+        }
+
         public void run() {
-            System.out.print("Execute Thread. input the number you want to calculate : _\b");
-            Scanner scanner = new Scanner(System.in);
-            boolean isValid = false;
-            
-            while (!isValid) {
-                int n = scanner.nextInt();
-                if (n > 9 || n <= 0) {
-                    isValid = false;
-                    System.out.print("Invalid input. input the number again : _\b");
-                }
-                else {
-                    System.out.println("Calculating . . . ");
-                    for (int i = 1; i <= 9; i++) {
-                        System.out.println(n + " * " + i + " = " + (n * i));
-                    }
-                    System.out.print("calculate has been completed.");
-                    isValid = true;
-                }
+            System.out.println("Execute Thread " + n + ".");
+            for (int i = 1; i <= 9; i++) {
+                System.out.println(n + " * " + i + " = " + (n * i));
             }
-            
-            scanner.close();
         }
     }
 }
