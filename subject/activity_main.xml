@@ -7,30 +7,89 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="30sp">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="너의 이름은? "
-        android:background="#00ff00"
-        android:padding="20sp"
-        android:layout_margin="10dp"/>
+    android:padding="20sp">
 
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/edtNum1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="숫자 1 입력"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/edtNum2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자 2 입력"
         android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/btnPush"
+        android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="눌러봐"
+        android:text="더하기"
         android:textSize="20sp"
-        android:backgroundTint="#ff0000"
+        android:backgroundTint="#59d5c4"
         android:padding="20sp"
         android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="빼기"
+        android:textSize="20sp"
+        android:backgroundTint="#59d5c4"
+        android:padding="20sp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="곱하기"
+        android:textSize="20sp"
+        android:backgroundTint="#59d5c4"
+        android:padding="20sp"
+        android:layout_margin="10dp"/>
+
+    <Button
+    android:id="@+id/btnDiv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="나누기"
+    android:textSize="20sp"
+    android:backgroundTint="#59d5c4"
+    android:padding="20sp"
+    android:layout_margin="10dp"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/btnMod"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="나머지"-->
+<!--        android:textSize="20sp"-->
+<!--        android:backgroundTint="#59d5c4"-->
+<!--        android:padding="20sp"-->
+<!--        android:layout_margin="10dp"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnReset"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="초기화"-->
+<!--        android:textSize="20sp"-->
+<!--        android:backgroundTint="#59d5c4"-->
+<!--        android:padding="20sp"-->
+<!--        android:layout_margin="10dp"/>-->
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:background="#2a8aff"
+        android:text="결과"/>
+
+
 </LinearLayout>
